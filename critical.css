@@ -1,0 +1,136 @@
+/* ===== CRITICAL CSS - LOADS FIRST ===== */
+:root {
+    --primary: #FF2E63;
+    --primary-dark: #D81B60;
+    --secondary: #08D9D6;
+    --dark: #1a1a2e;
+    --darker: #0F0F1E;
+    --light: #F8F9FA;
+    --gradient: linear-gradient(135deg, #FF2E63 0%, #08D9D6 100%);
+    --shadow: 0 10px 30px rgba(255, 46, 99, 0.2);
+    --radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--darker);
+    color: var(--light);
+    line-height: 1.8;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+/* Loader styles */
+.critical-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--darker);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+}
+
+/* Header - Above the fold */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section - Most important */
+.hero-section {
+    padding-top: 150px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.title-gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Telegram FAB */
+.telegram-fab {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 46, 99, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 46, 99, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 46, 99, 0); }
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gradient);
+    z-index: 1001;
+    transition: width 0.1s;
+}
+
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    z-index: 1002;
+}
+
+.skip-link:focus {
+    top: 0;
+}

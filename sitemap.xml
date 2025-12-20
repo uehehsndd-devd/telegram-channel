@@ -1,8 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- ===== HOMEPAGE ===== -->
   <url>
-    <loc>https://uehehsndd-devd.github.io/telegram-channel/</loc>
-    <lastmod>2024-12-20</lastmod>
+    <loc>https://g-e-8-official.github.io/</loc>
+    <lastmod>2024-12-20T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    
+    <!-- Multilingual alternatives -->
+    <xhtml:link rel="alternate" hreflang="ar" href="https://g-e-8-official.github.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://g-e-8-official.github.io/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://g-e-8-official.github.io/" />
+    
+    <!-- Images -->
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1200&h=630</image:loc>
+      <image:title>G_E_8 - القناة الرسمية للأفلام الكورية</image:title>
+      <image:caption>أكبر مكتبة أفلام كورية ومسلسلات Netflix على تليجرام</image:caption>
+      <image:license>https://unsplash.com/license</image:license>
+    </image:image>
+    
+    <!-- Video content (if applicable) -->
+    <video:video>
+      <video:thumbnail_loc>https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=800</video:thumbnail_loc>
+      <video:title>عرض تقديمي لقناة G_E_8</video:title>
+      <video:description>تعرف على مميزات قناة G_E_8 للمحتوى الدرامي</video:description>
+      <video:content_loc>https://t.me/G_E_8</video:content_loc>
+      <video:player_loc allow_embed="yes">https://g-e-8-official.github.io/</video:player_loc>
+      <video:duration>120</video:duration>
+      <video:rating>4.8</video:rating>
+      <video:view_count>230000</video:view_count>
+      <video:publication_date>2024-12-20T12:00:00+03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
+
+  <!-- ===== MOVIES SECTION ===== -->
+  <url>
+    <loc>https://g-e-8-official.github.io/#movies</loc>
+    <lastmod>2024-12-20T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://g-e-8-official.github.io/#movies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://g-e-8-official.github.io/en/#movies" />
+    
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1489599809516-9827b6d1cf13?auto=format&fit=crop&w=800</image:loc>
+      <image:title>أفلام كورية 2024</image:title>
+    </image:image>
+  </url>
+
+  <!-- ===== NETFLIX SERIES ===== -->
+  <url>
+    <loc>https://g-e-8-official.github.io/#series</loc>
+    <lastmod>2024-12-20T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://g-e-8-official.github.io/#series" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://g-e-8-official.github.io/en/#series" />
+    
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=800</image:loc>
+      <image:title>مسلسلات Netflix الأصلية</image:title>
+    </image:image>
+  </url>
+
+  <!-- ===== KDRAMA SECTION ===== -->
+  <url>
+    <loc>https://g-e-8-official.github.io/#kdrama</loc>
+    <lastmod>2024-12-20T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://g-e-8-official.github.io/#kdrama" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://g-e-8-official.github.io/en/#kdrama" />
+  </url>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <url>
+    <loc>https://g-e-8-official.github.io/#about</loc>
+    <lastmod>2024-12-20T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://g-e-8-official.github.io/#about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://g-e-8-official.github.io/en/#about" />
+  </url>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <url>
+    <loc>https://g-e-8-official.github.io/#contact</loc>
+    <lastmod>2024-12-20T12:00:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://g-e-8-official.github.io/#contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://g-e-8-official.github.io/en/#contact" />
+  </url>
+
+  <!-- ===== STATIC RESOURCES ===== -->
+  <url>
+    <loc>https://g-e-8-official.github.io/manifest.webmanifest</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://g-e-8-official.github.io/translations.json</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ===== EXTERNAL LINKS (for reference) ===== -->
+  <url>
+    <loc>https://t.me/G_E_8</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://t.me/TOB1_M1</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

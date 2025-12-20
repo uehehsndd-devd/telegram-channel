@@ -1,0 +1,136 @@
+# ===== G_E_8 ROBOTS.TXT =====
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /assets/
+Allow: /translations.json
+Allow: /manifest.webmanifest
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /backup/
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://g-e-8-official.github.io/sitemap.xml
+
+# ===== SEARCH ENGINE SPECIFIC RULES =====
+
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Allow: *.jpg
+Allow: *.png
+Allow: *.webp
+Disallow: /assets/images/private/
+
+# Bing
+User-agent: bingbot
+Allow: /
+Crawl-delay: 2
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Clean-param: ref /index.html
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /private/
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 3
+
+# ===== BAD BOTS =====
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# ===== SEO DIRECTIVES =====
+
+# Host directive (for multi-domain setups)
+Host: g-e-8-official.github.io
+
+# Visit-time directive
+Visit-time: 0000-2359
+
+# Request-rate directive
+Request-rate: 1/5 # 1 page every 5 seconds
+
+# ===== SECURITY =====
+
+# Prevent scanning of sensitive files
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /*.sql$
+Disallow: /*.env$
+Disallow: /*.bak$
+Disallow: /*.old$
+Disallow: /*.tmp$
+
+# ===== PERFORMANCE =====
+
+# Don't crawl print versions
+Disallow: /*?print
+Disallow: /*?print=*
+Disallow: /*?format=print
+
+# Don't crawl sort/filter parameters
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+Disallow: /*?limit=
+
+# ===== SOCIAL MEDIA =====
+
+# Allow social media crawlers for sharing
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Applebot
+Allow: /

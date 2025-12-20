@@ -1,0 +1,127 @@
+{
+  "name": "G_E_8 | أفلام كورية ومسلسلات Netflix",
+  "short_name": "G_E_8",
+  "description": "القناة الرسمية على تليجرام للأفلام الكورية ومسلسلات Netflix العالمية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#FF2E63",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["entertainment", "video", "social"],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&h=600",
+      "sizes": "800x600",
+      "type": "image/jpeg",
+      "label": "G_E_8 Main Screen",
+      "platform": "web"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1489599809516-9827b6d1cf13?auto=format&fit=crop&w=800&h=600",
+      "sizes": "800x600",
+      "type": "image/jpeg",
+      "label": "Movie Library",
+      "platform": "web"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "الأفلام الجديدة",
+      "short_name": "أفلام",
+      "description": "استعرض أحدث الأفلام",
+      "url": "/#movies",
+      "icons": [{ "src": "/assets/icons/movies-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "مسلسلات Netflix",
+      "short_name": "Netflix",
+      "description": "مسلسلات Netflix أصلية",
+      "url": "/#series",
+      "icons": [{ "src": "/assets/icons/netflix-96x96.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.telegram.messenger",
+      "id": "org.telegram.messenger"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/telegram-messenger/id686449807"
+    }
+  ],
+  "prefer_related_applications": true,
+  "scope": "/",
+  "id": "/",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "handle_links": "preferred",
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+ge8",
+      "url": "/?movie=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
