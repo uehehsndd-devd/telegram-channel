@@ -570,7 +570,163 @@
         </div>
     </header>
 
-    <!-- ===== HERO SECTION WITH PARALLAX ===== -->
+    <!-- ===== HERO SECTION WITH PARALLAX ===== --><!-- ===== AI SMART SEARCH SECTION ===== -->
+<section class="smart-search-section" id="smart-search">
+    <div class="container">
+        <div class="section-header">
+            <h2><span class="ai-badge">🤖 ذكي</span> ابحث عن أفلامك المفضلة</h2>
+            <p class="section-subtitle">مساعد AI يجد لك أفضل المحتوى بناءً على ذوقك</p>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" 
+                       id="searchInput" 
+                       placeholder="ما نوع الفيلم الذي تبحث عنه؟ اكتب اسم، ممثل، سنة، أو حتى وصف..."
+                       aria-label="بحث ذكي عن الأفلام">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            
+            <div class="search-suggestions" id="searchSuggestions">
+                <!-- الاقتراحات ستظهر هنا تلقائياً -->
+                <span class="suggestion-label">جرب:</span>
+                <button class="suggestion-tag" data-query="أفلام أكشن 2024">أفلام أكشن 2024</button>
+                <button class="suggestion-tag" data-query="مسلسلات Netflix جديدة">Netflix جديدة</button>
+                <button class="suggestion-tag" data-query="كيدراما رومانسية">كيدراما رومانسية</button>
+            </div>
+            
+            <div class="search-results" id="searchResults">
+                <!-- نتائج البحث تظهر هنا -->
+                <div class="search-welcome">
+                    <i class="fas fa-robot"></i>
+                    <h4>مرحباً! أنا مساعد G_E_8 الذكي</h4>
+                    <p>اكتب ما تبحث عنه وسأساعدك في العثور على أفضل الأفلام والمسلسلات</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-stats">
+            <div class="stat">
+                <i class="fas fa-database"></i>
+                <span>5,000+</span>
+                <p>فيلم ومسلسل في قاعدة البيانات</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-bolt"></i>
+                <span>0.5s</span>
+                <p>سرعة البحث</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-brain"></i>
+                <span>ذكي</span>
+                <p>يتعلم من تفضيلاتك</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== AI RECOMMENDATIONS SECTION ===== -->
+<section class="ai-recommendations-section" id="recommendations">
+    <div class="container">
+        <div class="section-header">
+            <h2><span class="ai-badge">🎯 مخصص</span> توصيات ذكية لك</h2>
+            <p class="section-subtitle">نظام توصية يتكيف مع ذوقك الشخصي</p>
+        </div>
+        
+        <!-- Mood Selector -->
+        <div class="mood-selector">
+            <p class="mood-question">ما هو مزاجك اليوم؟</p>
+            <div class="mood-buttons">
+                <button class="mood-btn" data-mood="happy">
+                    <i class="fas fa-smile"></i>
+                    <span>سعيد 😊</span>
+                </button>
+                <button class="mood-btn" data-mood="excited">
+                    <i class="fas fa-star"></i>
+                    <span>متحمس 🎉</span>
+                </button>
+                <button class="mood-btn" data-mood="relaxed">
+                    <i class="fas fa-couch"></i>
+                    <span>مسترخي 😌</span>
+                </button>
+                <button class="mood-btn active" data-mood="neutral">
+                    <i class="fas fa-user"></i>
+                    <span>عادي 😐</span>
+                </button>
+                <button class="mood-btn" data-mood="sad">
+                    <i class="fas fa-sad-tear"></i>
+                    <span>حزين 😢</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mood-based Recommendations -->
+        <div class="mood-recommendations" id="moodRecommendations">
+            <div class="mood-recommendation-card">
+                <div class="mood-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>بناءً على مزاجك، نوصي بـ:</h4>
+                </div>
+                <div class="mood-tags" id="moodTags">
+                    <!-- Tags will be added by JS -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- AI Recommendations Grid -->
+        <div class="ai-recommendations-grid" id="recommendationsContainer">
+            <!-- Recommendations will be loaded by JS -->
+            <div class="recommendation-card">
+                <div class="recommendation-header">
+                    <span class="recommendation-badge">الأكثر مشاهدة</span>
+                    <h4>🔥 ما يشاهده 230,000 مشترك الآن</h4>
+                </div>
+                <div class="recommendation-content">
+                    <div class="recommended-item">
+                        <div class="item-info">
+                            <h5>فيلم الأكشن الكوري الأقوى 2024</h5>
+                            <div class="item-meta">
+                                <span class="rating">⭐ 9.2/10</span>
+                                <span class="views">👁️ 50K مشاهدة</span>
+                            </div>
+                        </div>
+                        <a href="https://t.me/G_E_8" target="_blank" class="watch-now-btn">
+                            <i class="fas fa-play"></i>
+                            شاهد الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendation-card">
+                <div class="recommendation-header">
+                    <span class="recommendation-badge">جديد القناة</span>
+                    <h4>🆕 أضيف اليوم على القناة</h4>
+                </div>
+                <div class="recommendation-content">
+                    <div class="recommended-item">
+                        <div class="item-info">
+                            <h5>مسلسل Netflix حصري - الموسم الجديد</h5>
+                            <div class="item-meta">
+                                <span class="rating">⭐ 8.9/10</span>
+                                <span class="new">🆕 جديد</span>
+                            </div>
+                        </div>
+                        <a href="https://t.me/G_E_8" target="_blank" class="watch-now-btn">
+                            <i class="fas fa-bolt"></i>
+                            اكتشف الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ai-notice">
+            <i class="fas fa-info-circle"></i>
+            <p>🤖 نظام التوصيات يتعلم من اختياراتك ليعرض لك محتوى أفضل في المرات القادمة</p>
+        </div>
+    </div>
+</section>
     <section id="home" class="hero-section" role="main" aria-label="القسم الرئيسي">
         <div class="hero-parallax">
             <div class="parallax-layer layer-1" data-speed="0.1"></div>
@@ -744,7 +900,14 @@
         </div>
     </section>
 
-    <!-- ===== KOREAN MOVIES SECTION ===== -->
+    <!-- ===== KOREAN MOVIES SECTION ===== --><!-- أضف هذا قبل <section id="movies"> -->
+
+<!-- ===== AI RECOMMENDATIONS SECTION ===== -->
+<section class="ai-recommendations-section" id="recommendations">
+    <div class="container">
+        <!-- ... كود التوصيات الذكية الكامل ... -->
+    </div>
+</section>
     <section id="movies" class="movies-section" aria-label="الأفلام الكورية">
         <div class="container">
             <div class="section-header">
@@ -1197,6 +1360,88 @@
                 notification.remove();
             }, 3000);
         }
-    </script>
+    </script><!-- ===== AI FEATURES SCRIPTS ===== -->
+<script src="assets/js/smart-search.js"></script>
+<script src="assets/js/movie-recommender.js"></script>
+<script src="assets/js/chatbot-widget.js"></script>
+
+<script>
+    // تهيئة الأنظمة عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🤖 G_E_8 AI Systems Initializing...');
+        
+        // إضافة تأثيرات للعناصر الجديدة
+        const aiElements = document.querySelectorAll('.ai-badge, .recommendation-card');
+        aiElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                el.style.transition = 'all 0.6s ease';
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }, 100 * index);
+        });
+        
+        // إضافة تفاعل للأزرار
+        document.querySelectorAll('.mood-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // تغيير التوصيات حسب المزاج
+                const mood = this.dataset.mood;
+                updateMoodRecommendations(mood);
+            });
+        });
+        
+        // تفاعل أزرار الاقتراحات
+        document.querySelectorAll('.suggestion-tag').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const query = this.dataset.query;
+                document.getElementById('searchInput').value = query;
+                document.getElementById('searchInput').focus();
+                
+                // تشغيل البحث إذا كان النظام جاهز
+                if (window.smartSearch) {
+                    window.smartSearch.performSearch(query);
+                }
+            });
+        });
+        
+        // تحديث التوصيات حسب المزاج
+        function updateMoodRecommendations(mood) {
+            const moodText = {
+                'happy': 'للمزاج السعيد نوصي بأفلام كوميدية ودراما خفيفة',
+                'excited': 'للمتحمسين نوصي بأفلام أكشن ومغامرات',
+                'relaxed': 'للراحة نوصي بدراما هادئة ووثائقيات',
+                'sad': 'للحزن نوصي بدراما عاطفية وقصص ملهمة',
+                'neutral': 'جرب أشهر المحتويات وأفضلها تقييماً'
+            };
+            
+            const moodTags = {
+                'happy': ['أفلام كوميدية', 'رومانسية', 'دراما خفيفة', 'عائلية'],
+                'excited': ['أكشن', 'مغامرات', 'خيال علمي', 'تشويق'],
+                'relaxed': ['دراما', 'وثائقية', 'رومانسية هادئة', 'تاريخية'],
+                'sad': ['دراما عاطفية', 'ملهمة', 'رومانسية', 'واقعية'],
+                'neutral': ['الأكثر مشاهدة', 'أعلى تقييماً', 'جديد القناة', 'مفاجآت']
+            };
+            
+            // تحديث النص
+            const moodTagsContainer = document.getElementById('moodTags');
+            if (moodTagsContainer) {
+                moodTagsContainer.innerHTML = moodTags[mood].map(tag => 
+                    `<a href="https://t.me/G_E_8" target="_blank" class="mood-tag">${tag}</a>`
+                ).join('');
+            }
+            
+            // إضافة رسالة في الكونسول
+            console.log(`🎭 تغيير المزاج إلى: ${mood} - ${moodText[mood]}`);
+        }
+        
+        // تهيئة التوصيات الأولية
+        updateMoodRecommendations('neutral');
+    });
+</script>
 </body>
 </html>
