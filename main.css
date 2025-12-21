@@ -902,4 +902,126 @@ p {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}/* ===== NO RESULTS STYLES ===== */
+.no-local-results {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    color: #667eea;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.no-local-results h4 {
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.no-local-results p {
+    color: #718096;
+    margin-bottom: 30px;
+}
+
+.bot-search-suggestion {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.suggestion-card {
+    background: linear-gradient(135deg, #0088cc 0%, #005c8a 100%);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.suggestion-card i {
+    font-size: 2.5rem;
+    color: #ffd700;
+}
+
+.suggestion-content {
+    flex: 1;
+}
+
+.suggestion-content h5 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.suggestion-content p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.bot-search-btn {
+    background: #ffd700;
+    color: #005c8a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.bot-search-btn:hover {
+    background: #ffed4e;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.alternative-options {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.alternative-options p {
+    margin-bottom: 15px;
+    color: #4a5568;
+}
+
+.alternative-options button {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.alternative-options button:hover {
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.channel-link {
+    display: inline-block;
+    background: #48bb78;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.channel-link:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+    color: white;
 }

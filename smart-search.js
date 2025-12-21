@@ -66,8 +66,35 @@ class SmartSearch {
         }
     }
     
-    performSearch(query) {performSearch(query) {
-    const results = this.searchMovies(query);
+  performSearch(query) {
+    const q = query.trim();
+    
+    if (q.length === 0) {
+        this.hideResults();
+        return;
+    }
+    
+    // البحث المحلي أولاً
+    const localResults = this.searchMovies(q);
+    
+    // إذا كانت نتائج البحث المحلي قليلة أو فارغة، توجيه للبوت
+    if (localResults.length === 0 || q.length > 3) {
+        // تحقق إذا كان نظام البوت متاحاً
+        if (window.telegramBotSearch && typeof window.telegramBotSearch.displaySearchInterface === 'function') {
+            console.log('🤖 Redirecting to Telegram bot search:', q);
+            window.telegramBotSearch.displaySearchInterface(q, 'searchResults');
+            return;
+        }
+    }
+    
+    // إذا كان هناك نتائج محلية جيدة، عرضها
+    if (localResults.length > 0) {
+        this.displayResults(localResults);
+    } else {
+        // إذا لا توجد نتائج محلية ولا بوت، عرض رسالة
+        this.displayNoResults(q);
+    }
+}
     
     // إذا كان البحث فارغاً أو قليل النتائج، توجيه للبوت
     if (results.length === 0 || query.length > 2) {
@@ -183,4 +210,61 @@ class SmartSearch {
 // تهيئة البحث عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', () => {
     window.smartSearch = new SmartSearch();
-});
+});displayNoResults(query) {
+    if (!this.searchResults) return;
+    
+    const noResultsHTML = `
+        <div class="no-local-results">
+            <div class="no-results-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <h4>لا توجد نتائج محلية لـ "${query}"</h4>
+            <p>يمكننا البحث في قاعدة بيانات البوت الذكي:</p>
+            
+            <div class="bot-search-suggestion">
+                <div class="suggestion-card">
+                    <i class="fab fa-telegram"></i>
+                    <div class="suggestion-content">
+                        <h5>🔍 استخدم بوت البحث @Cimakingbot</h5>
+                        <p>يبحث في مكتبة 5,000+ فيلم ومسلسل</p>
+                    </div>
+                    <button onclick="searchWithTelegramBot('${query}')" class="bot-search-btn">
+                        <i class="fab fa-telegram"></i>
+                        بحث في البوت
+                    </button>
+                </div>
+            </div>
+            
+            <div class="alternative-options">
+                <p>أو جرب:</p>
+                <button onclick="document.getElementById('searchInput').value = 'أفلام ${query}'; performSearch('أفلام ${query}')">
+                    🔍 بحث بـ "أفلام ${query}"
+                </button>
+                <button onclick="document.getElementById('searchInput').value = '${query} 2024'; performSearch('${query} 2024')">
+                    🆕 بحث بـ "${query} 2024"
+                </button>
+                <a href="https://t.me/G_E_8" target="_blank" class="channel-link">
+                    📢 تصفح القناة مباشرة
+                </a>
+            </div>
+        </div>
+    `;
+    
+    this.searchResults.innerHTML = noResultsHTML;
+    this.searchResults.style.display = 'block';
+}// دالة مساعدة للبحث عبر البوت
+function searchWithTelegramBot(query) {
+    if (window.telegramBotSearch && typeof window.telegramBotSearch.displaySearchInterface === 'function') {
+        window.telegramBotSearch.displaySearchInterface(query, 'searchResults');
+    } else {
+        // رابط احتياطي
+        const botLink = `https://t.me/Cimakingbot?start=search_${encodeURIComponent(query)}`;
+        window.open(botLink, '_blank');
+    }
+}
+
+// دالة للبحث في القناة مباشرة
+function searchInTelegramChannel(query) {
+    const channelLink = `https://t.me/G_E_8?q=${encodeURIComponent(query)}`;
+    window.open(channelLink, '_blank');
+}
