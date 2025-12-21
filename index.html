@@ -1462,9 +1462,18 @@
         }
     });
     });
+<script>
+    // تحميل النظام بعد تحميل الصفحة
+    window.addEventListener('load', function() {
+        console.log('🔄 جاري تحميل نظام المسلسلات...');
+        const script = document.createElement('script');
+        script.src = 'js/series-magic-system.js?v=' + Date.now();
+        script.onload = () => console.log('✅ النظام محمل بنجاح');
+        script.onerror = (e) => console.log('❌ فشل التحميل:', e);
+        document.body.appendChild(script);
+    });
 </script>
-
-<script src="js/series-magic-system.js" defer></script>
+<script src="js/series-magic-system.js?v=2" defer></script
 
 </body>
 </html>
