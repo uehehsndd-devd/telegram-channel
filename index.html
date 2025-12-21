@@ -1442,6 +1442,24 @@
         // تهيئة التوصيات الأولية
         updateMoodRecommendations('neutral');
     });
+</script><!-- Telegram Bot Integration -->
+<script src="assets/js/telegram-bot-integration.js"></script>
+
+<script>
+    // تهيئة نظام البوت
+    document.addEventListener('DOMContentLoaded', function() {
+        window.telegramBotSearch = new TelegramBotSearch();
+        
+        // تعديل البحث ليتجه للبوت مباشرة
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('search', function(e) {
+                if (this.value.trim().length > 0) {
+                    window.telegramBotSearch.displaySearchInterface(this.value, 'searchResults');
+                }
+            });
+        }
+    });
 </script>
 </body>
 </html>

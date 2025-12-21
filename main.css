@@ -677,4 +677,229 @@ p {
         text-align: center;
         padding: 15px;
     }
-}) ... */
+}) ... *//* ===== TELEGRAM BOT SEARCH STYLES ===== */
+.telegram-bot-search-result {
+    animation: fadeIn 0.5s ease;
+}
+
+.bot-search-card {
+    background: linear-gradient(135deg, #0088cc 0%, #005c8a 100%);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 15px 35px rgba(0, 136, 204, 0.3);
+}
+
+.bot-search-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.bot-avatar {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #0088cc;
+}
+
+.bot-info h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.bot-info p {
+    margin: 5px 0 0;
+    opacity: 0.9;
+}
+
+.search-query-display {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-query-display i {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.query-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.bot-search-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffae00 100%);
+    color: #005c8a;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.bot-search-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+    color: #005c8a;
+}
+
+.alternative-actions {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.alternative-actions p {
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.alt-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 12px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.alt-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+.search-tips {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.search-tips h5 {
+    margin-top: 0;
+    color: #ffd700;
+}
+
+.search-tips ul {
+    margin: 15px 0 0;
+    padding-right: 20px;
+}
+
+.search-tips li {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+/* رسالة البحث */
+.bot-search-message {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.bot-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #0088cc;
+}
+
+.bot-header i {
+    font-size: 2.5rem;
+}
+
+.search-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.steps-list {
+    padding-right: 20px;
+    margin: 15px 0;
+}
+
+.steps-list li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.bot-features {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.bot-features h5 {
+    color: #005c8a;
+    margin-top: 0;
+}
+
+.bot-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+.bot-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.bot-features i {
+    color: #0088cc;
+    width: 20px;
+}
+
+/* مؤشر التحميل */
+.bot-loading {
+    text-align: center;
+    padding: 40px;
+}
+
+.bot-loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #0088cc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -66,7 +66,20 @@ class SmartSearch {
         }
     }
     
-    performSearch(query) {
+    performSearch(query) {performSearch(query) {
+    const results = this.searchMovies(query);
+    
+    // إذا كان البحث فارغاً أو قليل النتائج، توجيه للبوت
+    if (results.length === 0 || query.length > 2) {
+        // استخدم نظام البوت
+        if (window.telegramBotSearch) {
+            window.telegramBotSearch.displaySearchInterface(query, 'searchResults');
+            return;
+        }
+    }
+    
+    this.displayResults(results);
+}
         const results = this.searchMovies(query);
         this.displayResults(results);
     }
